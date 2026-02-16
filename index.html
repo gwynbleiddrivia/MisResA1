@@ -7,12 +7,12 @@
   </head>
   <header>
     <div id="header"></div>
-    <script>
+    <script id="scriptForHeader">
         fetch("header.html")
         .then(res=>res.text())
         .then(data => {
             document.getElementById("header").innerHTML = data;
-            
+
             const menuBtn = document.getElementById('menuBtn');
             const menuList = document.getElementById('menuList');
             if (menuBtn && menuList) {
@@ -28,4 +28,18 @@
       Hello world! s
     </h1>
   </body>
+  <footer>
+    <div id="footer">
+
+    <script id="scriptForFooter">
+        fetch("footer.html")
+        .then(res=>res.text())
+        .then(data=>{
+            document.getElementById("footer").innerHTML = data;
+
+        })
+
+    </script>
+    </div>
+  </footer>
 </html>
