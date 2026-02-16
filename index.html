@@ -1,1 +1,31 @@
-Hi
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <header>
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+        .then(res=>res.text())
+        .then(data => {
+            document.getElementById("header").innerHTML = data;
+            
+            const menuBtn = document.getElementById('menuBtn');
+            const menuList = document.getElementById('menuList');
+            if (menuBtn && menuList) {
+                menuBtn.addEventListener('click', () => {
+                    menuList.classList.toggle('hidden');
+                });
+            }
+        })
+    </script>
+  </header>
+  <body>
+    <h1 class="text-3xl font-bold underline">
+      Hello world! s
+    </h1>
+  </body>
+</html>
