@@ -20,14 +20,64 @@
                     menuList.classList.toggle('hidden');
                 });
             }
+
         })
     </script>
   </header>
+
   <body>
     <h1 class="text-3xl font-bold underline">
       Hello world! s
     </h1>
+    <div id="homePage" class=""></div>
+    <div id="productPage" class="hidden"></div>
+    <script>
+            fetch("home.html")
+            .then(resHome=>resHome.text())
+            .then(dataHome => {
+                document.getElementById("homePage").innerHTML = dataHome
+
+                const homeBtn = document.getElementById('homeBtn');
+                const productBtn = document.getElementById('productBtn');
+                const homePage = document.getElementById('homePage')
+                const productPage = document.getElementById('productPage');
+                
+                if (homeBtn) {
+                    homeBtn.addEventListener('click', () => {
+                        fetch("home.html")
+                        .then(resHome=>resHome.text())
+                        .then(dataHome =>{
+                           // console.log("home tipsi")
+                            homePage.classList.remove('hidden');
+                            productPage.classList.add('hidden');
+                            document.getElementById("homePage").innerHTML = dataHome
+                        })
+                    })
+                }
+                
+                if (productBtn) {
+                    productBtn.addEventListener('click', () => {
+                        fetch("product.html")
+                        .then(resProd=>resProd.text())
+                        .then(dataProduct =>{
+                           // console.log("product tipsi")
+                            productPage.classList.remove('hidden');
+                            homePage.classList.add('hidden');
+                            document.getElementById("productPage").innerHTML = dataProduct
+                        })
+                    })
+                }
+
+
+
+            })
+
+            
+    </script>
+
+
   </body>
+
   <footer>
     <div id="footer">
 
