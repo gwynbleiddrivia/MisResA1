@@ -26,9 +26,6 @@
   </header>
 
   <body>
-    <h1 class="text-3xl font-bold underline">
-      Hello world! s
-    </h1>
     <div id="homePage" class=""></div>
     <div id="productPage" class="hidden"></div>
     <script>
@@ -50,6 +47,8 @@
                            // console.log("home tipsi")
                             homePage.classList.remove('hidden');
                             productPage.classList.add('hidden');
+                            homeBtn.classList.add('text-blue-500')
+                            productBtn.classList.remove('text-blue-500')
                             document.getElementById("homePage").innerHTML = dataHome
                         })
                     })
@@ -63,6 +62,8 @@
                            // console.log("product tipsi")
                             productPage.classList.remove('hidden');
                             homePage.classList.add('hidden');
+                            productBtn.classList.add('text-blue-500')
+                            homeBtn.classList.remove('text-blue-500')
                             document.getElementById("productPage").innerHTML = dataProduct
                         })
                     })
