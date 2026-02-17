@@ -25,7 +25,7 @@
     </script>
   </header>
 
-  <body>
+  <body class="">
     <div id="homePage" class=""></div>
     <div id="productPage" class="hidden"></div>
     <script>
@@ -50,6 +50,9 @@
                             homeBtn.classList.add('text-blue-500')
                             productBtn.classList.remove('text-blue-500')
                             document.getElementById("homePage").innerHTML = dataHome
+                            if (typeof getProducts === 'function') {
+                                getProducts();
+                            }
                         })
                     })
                 }
