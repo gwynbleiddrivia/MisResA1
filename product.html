@@ -1,3 +1,22 @@
-<div id="productPage">
-    This is product
+<div id="productPage text-center">
+    <h1 class="text-3xl text-center font-bold">Our Products</h1>
+<div class="text-center md:text-center flex flex-col gap-2 md:flex-row right-0">
+    <div class="">
+
+    <button id="allBtn" class="px-3 py-2 text-white bg-blue-500 rounded-lg">All</button>
+    <button id="electronicsBtn" class="px-3 py-2 text-white bg-blue-500 rounded-lg">Electronics</button>
+    <button id="jewelryBtn" class="px-3 py-2 text-white bg-blue-500 rounded-lg">Jewelry</button>
+    
+    </div>
+    <div>
+
+    <button id="mensBtn" class="px-3 py-2 text-white bg-blue-500 rounded-lg">Men's Clothing</button>
+    <button id="womensBtn" class="px-3 py-2 text-white bg-blue-500 rounded-lg">Women's Clothing</button>
+
+    </div>   
+
+</div>
+
+    <div id="productItems" class="flex flex-col md:grid md:grid-cols-4 md:mx-32"></div>
+    <script src="loadProduct.js"></script>
 </div>

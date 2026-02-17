@@ -50,8 +50,8 @@
                             homeBtn.classList.add('text-blue-500')
                             productBtn.classList.remove('text-blue-500')
                             document.getElementById("homePage").innerHTML = dataHome
-                            if (typeof getProducts === 'function') {
-                                getProducts();
+                            if (typeof renderTrending === 'function') {
+                                renderTrending();
                             }
                         })
                     })
@@ -68,6 +68,11 @@
                             productBtn.classList.add('text-blue-500')
                             homeBtn.classList.remove('text-blue-500')
                             document.getElementById("productPage").innerHTML = dataProduct
+                            if (typeof window.initProductButtons === 'function') {
+                                window.initProductButtons();
+                            }
+                            loadAll();
+
                         })
                     })
                 }
@@ -96,5 +101,6 @@
     </script>
     </div>
   </footer>
-  <script src="load.js"></script>
+  <script src="loadTrending.js"></script>
+  <script src="loadProduct.js"></script>
 </html>
