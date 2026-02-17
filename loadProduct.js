@@ -12,20 +12,21 @@ const cardDesign = (data) => {
               div.innerHTML=`
                             
                         <div class="flex flex-col m-2 gap-2">
-                        <img class="bg-gray-300 rounded-lg w-screen md:p-12" src=${single.image}\>
+                        <img class="bg-gray-300 rounded-lg w-full h-full object-cover md:p-12" src=${single.image}\>
                         <div class="flex justify-between">
-                            <div class="bg-violet-200 text-violet-500 rounded-lg px-2 font-bold">${single.category}</div>
+                            <div class="bg-violet-200 text-violet-500 rounded-lg px-2">${single.category}</div>
                             <div>${single.rating?.rate}(${single.rating?.count})</div>
                         </div>
                         <span class="font-bold">${single.title}</span>
                         <div class="flex justify-between">
-                            <button class="flex justify-between gap-1 border-1 rounded-lg px-3 py-1">
+                            <button class="flex justify-between gap-2 border-1 border-purple-500 rounded-lg px-1 py-1">
                                 <img class="w-6 h-6" src="asset/eye.png"\>
-                                <p>Details</p>
+                                <p class="text-sm">Details</p>
                             </button>
-                            <button class="flex justify-between gap-1 border-1 rounded-lg px-3 py-1 bg-blue-500 text-white">
+
+                            <button class="flex justify-between gap-2 border-1 rounded-lg px-2 py-1 bg-blue-500 text-white">
                                 <img class="w-6 h-6" src="asset/cart.png"\>
-                                <p>Add</p>
+                                <p class="text-sm">Add</p>
                             </button>
                         </div>
                         </div>

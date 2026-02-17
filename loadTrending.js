@@ -12,8 +12,9 @@ const trendingItems = (data) =>{
         const div = document.createElement('div')
         div.className = "bg-white p-0 m-0 rounded shadow flex justify-between flex-col border-0 w-full gap-2"
         div.innerHTML = `
+
         <div class="flex flex-col m-2 gap-2">
-        <img class="bg-gray-300 rounded-lg w-screen md:p-12" src=${single.image}\>
+        <img class="bg-gray-300 rounded-lg w-full h-full  object-cover md:p-12" src=${single.image}\>
         <div class="flex justify-between">
             <div class="bg-violet-200 text-violet-500 rounded-lg px-2 font-bold">${single.category}</div>
             <div>${single.rating?.rate}(${single.rating?.count})</div>
@@ -30,16 +31,12 @@ const trendingItems = (data) =>{
             </button>
         </div>
         </div>
+
         `;
         container.appendChild(div);
     })
 
 }
-
-
-
-
-
 
 
 
